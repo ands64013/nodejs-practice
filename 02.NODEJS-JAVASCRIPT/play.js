@@ -1,4 +1,5 @@
 const { close } = require("fs");
+const { resolve } = require("path");
 const { isArgumentsObject } = require("util/types");
 
 const name = "Max";
@@ -69,3 +70,47 @@ const toArrayy = (...args) => {
 };
 
 console.log(toArrayy(1, 2, 3, 4));
+
+const printName = ({ name }) => {
+  console.log(name);
+};
+
+printName(person);
+
+const { name2, age2 } = person;
+console.log(name2, age2);
+
+//
+// const fetchData = (callback) => {
+//   setTimeout(() => {
+//     callback("Done!");
+//   }, 1500);
+// };
+
+// setTimeout(() => {
+//   console.log("Timer is done!");
+//   fetchData((text) => {
+//     console.log(text);
+//   });
+// }, 2000);
+
+const fetchData = () => {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Done");
+    }, 1500);
+  });
+  return promise;
+};
+
+setTimeout(() => {
+  console.log("Time is done!");
+  fetchData()
+    .then((text) => {
+      console.log(text);
+      return fetchData();
+    })
+    .then((text2) => {
+      console.log(text2);
+    });
+});
