@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-practice",
+  "version": "1.0.0",
+  "description": "01.NODE-FIRST-APP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon 03.NODEJS-SERVER/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ands64013/nodejs-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ands64013/nodejs-practice/issues"
+  },
+  "homepage": "https://github.com/ands64013/nodejs-practice#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
