@@ -104,3 +104,4 @@ dist
 
 # TernJS port file
 .tern-port
+04.NODEJS-EXPRESS/package-lock.json
