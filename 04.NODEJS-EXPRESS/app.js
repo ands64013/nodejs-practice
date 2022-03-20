@@ -4,6 +4,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 
+app.set("view engine", "pug");
+app.set("views", "./04.NODEJS-EXPRESS/views"); // default : views / package.json 기준이다.
+
 const adminData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
